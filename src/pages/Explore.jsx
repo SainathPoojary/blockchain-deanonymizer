@@ -9,17 +9,17 @@ export default function Explore() {
     "36mwz7xBbw4YVteng6iZaTDdBGsK5pWGQG"
   );
 
-  const [walletData, setWalletData] = useState(data);
+  const [walletData, setWalletData] = useState({});
   const [loading, setLoading] = useState(true);
 
   const getWalletData = async () => {
     setLoading(true);
-    // const response = await fetch(
-    //   `https://blockchain.info/rawaddr/${walletAddress}`
-    // );
-    // const data = await response.json();
-    // console.log(data);
-    // setWalletData(data);
+    const response = await fetch(
+      `https://blockchain.info/rawaddr/${walletAddress}`
+    );
+    const data = await response.json();
+    console.log(data);
+    setWalletData(data);
     setLoading(false);
   };
   useEffect(() => {

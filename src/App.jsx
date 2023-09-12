@@ -5,7 +5,7 @@ import Explore from "./pages/Explore";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Explore />} />
       <Route path="/explore" element={<Explore />} />
     </Routes>
   );
